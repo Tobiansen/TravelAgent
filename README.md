@@ -4,7 +4,21 @@ TravelAgent links an Atech ESP32-S3 suitcase alarm to a Unity Android app over B
 
 Ticket text shared from Gmail supplies the airline. After the traveler inspects the bag and confirms damage, Exa Search and Contents retrieve official reporting steps, photo requirements and the reporting page. Evidence photos stay local; the traveler completes the airline's form.
 
-<img src="media/live-motion.png" alt="TravelAgent live motion timeline" width="280">
+## Hardware
+
+<table>
+  <tr><th>Atech layout</th><th>Fusion design</th><th>Built device</th></tr>
+  <tr>
+    <td align="center"><a href="media/hardware/01-atech-layout.jpg"><img src="media/hardware/01-atech-layout.jpg" alt="TravelAgent electronics in Atech's board viewer" width="280"></a></td>
+    <td align="center"><a href="media/hardware/02-fusion-design.png"><img src="media/hardware/02-fusion-design.png" alt="Fusion enclosure and drum assembly" width="280"></a></td>
+    <td align="center"><a href="media/hardware/03-built-device.jpg"><img src="media/hardware/03-built-device.jpg" alt="Assembled TravelAgent device with wired drum motor" height="220"></a></td>
+  </tr>
+</table>
+
+## Integrations
+
+- **[Atech.dev](https://atech.dev/):** Its SDK builds the firmware, and its hardware models guided the Fusion enclosure and motor mount. We used the visual designer and board viewer to document the connections.
+- **[Exa](https://exa.ai/):** The gateway uses Search to find official airline reporting guidance and Contents to check the cited pages. The app presents photo requirements and a direct reporting link.
 
 ## Run
 
