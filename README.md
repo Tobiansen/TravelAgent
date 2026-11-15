@@ -56,6 +56,6 @@ This is a hackathon prototype. The timeline records connected sessions only: dev
 
 ## Submission and licensing
 
-Source repository: [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard). The Unity app, gateway/launcher, current firmware and actual STL print layouts are collected here. APK and firmware release attachments are still pending; their verified hashes are listed in [Release files](docs/RELEASES.md). The demo-video link and event submission remain separate handoff items in [Submission notes](docs/SUBMISSION.md).
+Source repository: [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard). The Unity app, gateway/launcher, current firmware source and actual STL print layouts are collected here. An APK download release is being prepared. The firmware binary remains local while upstream build/redistribution materials are reviewed; its source is included. See [Release files](docs/RELEASES.md) for hashes and availability. The demo-video link and event submission remain separate handoff items in [Submission notes](docs/SUBMISSION.md).
 
 Team-authored work is covered by [LICENSE](LICENSE). Third-party components retain their own notices in `third_party/` and within the source. Atech reference geometry must not be represented as team-authored MIT material.

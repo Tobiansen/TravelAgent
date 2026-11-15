@@ -21,7 +21,7 @@ Do not publish credentials, native owner/session settings, real emails, user pho
 
 Keep source in Git. Use a versioned release for the APK and firmware binary, with checksums and build notes. GitHub describes releases as the place to package deployable software and binary downloads: [About releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 
-`dist/` is local staging, excluded from Git. Release attachments have not been published yet; [Release files](RELEASES.md) lists the prepared binary hashes. Do not copy a laptop's encrypted session token into a release. A new user configures their own key/session using the setup instructions.
+`dist/` is local staging, excluded from Git. The APK download release has not been published yet; [Release files](RELEASES.md) lists the prepared binary hashes. The firmware binary stays local pending upstream build/redistribution-material review, while its source and build instructions are included in the repository. Do not copy a laptop's encrypted session token into a release. A new user configures their own key/session using the setup instructions.
 
 Add the finished demo-video link after it exists. Avoid committing large raw takes; review the recording for names, booking references, tokens, notifications and unrelated screens before publishing it.
 
@@ -31,7 +31,7 @@ Add the finished demo-video link after it exists. Avoid committing large raw tak
 - Review the source, copied settings, license boundaries and secret-scan result.
 - Maintain the public repository from this clean tree; do not push the original development folders wholesale.
 - Open the new repository while signed out and check that README links, screenshots and source downloads work.
-- Attach the verified binaries to a release and add the actual demo-video link.
+- Attach the verified APK to a release and add the actual demo-video link. Keep the firmware binary local until its required upstream materials have been reviewed.
 
 The [official Junction 2026 site](https://2026.hackjunction.com/) states in its ownership FAQ that submissions are open-sourced under MIT. The team's license cannot override third-party font, Unity, SDK or model licenses; preserve their notices and keep reference geometry distinct from team-created parts.
 
@@ -41,4 +41,4 @@ The team's existing Atech challenge brief calls for meaningful live hardware, a 
 
 For the Exa story, show the actual reporting-research request, useful official sources, required evidence and final traveler handoff. Do not attribute local ticket parsing to Exa, claim photo analysis or present fixtures as live research.
 
-The public repository has been created. Binary attachments, a finished demo-video link, a summary post and the final event form remain separate tasks; this document does not mark them complete.
+The public repository has been created. The APK release, a finished demo-video link, a summary post and the final event form remain separate tasks; this document does not mark them complete.

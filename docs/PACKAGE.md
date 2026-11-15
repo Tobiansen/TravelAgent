@@ -17,8 +17,10 @@ event submission have separate publication steps.
   dependency snapshot and host harness source.
 - Curated public setup, demo, architecture, hardware and validation docs; generic
   app screenshots; a scoped MIT license and preserved third-party notices.
-- Verified APK/firmware files in local, Git-ignored `dist/`, ready for a later
-  release. Their filenames, sizes and hashes are in [RELEASES.md](RELEASES.md).
+- Verified APK/firmware files in local, Git-ignored `dist/`. The APK is prepared
+  for a download release; the firmware binary remains local pending upstream
+  build/redistribution-material review. Their filenames, sizes and hashes are
+  in [RELEASES.md](RELEASES.md); firmware source and build instructions are included.
 
 ## Deliberately excluded
 
