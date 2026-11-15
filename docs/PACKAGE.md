@@ -2,10 +2,11 @@
 
 This is the clean source package for
 [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard).
-Local Git has been initialized with that public repository as its destination.
-Assembling this snapshot did not modify the working app, board, installed phone
-build or laptop gateway. Binary release attachments, the demo video and the
-event submission have separate publication steps.
+Source is published in that repository, and the [APK prerelease](https://github.com/Tobiansen/travelagent-crumbguard/releases/tag/v0.1.0-junction2026)
+provides the Android build, checksum and license notices. Assembling this snapshot
+did not modify the working app, board, installed phone build or laptop gateway.
+The firmware binary remains local; the demo video, Discord summary and event
+submission are separate handoff items.
 
 ## Included
 
@@ -17,8 +18,8 @@ event submission have separate publication steps.
   dependency snapshot and host harness source.
 - Curated public setup, demo, architecture, hardware and validation docs; generic
   app screenshots; a scoped MIT license and preserved third-party notices.
-- Verified APK/firmware files in local, Git-ignored `dist/`. The APK is prepared
-  for a download release; the firmware binary remains local pending upstream
+- Verified APK/firmware files in local, Git-ignored `dist/`. The APK is also
+  available in the published prerelease; the firmware binary remains local pending upstream
   build/redistribution-material review. Their filenames, sizes and hashes are
   in [RELEASES.md](RELEASES.md); firmware source and build instructions are included.
 
@@ -57,8 +58,9 @@ relationships required by Unity, the launcher and firmware were preserved.
   firmware. The copied firmware/dependency files match the original snapshot.
 
 The included GitHub Actions workflow runs the gateway and Windows launcher
-fixture suites. Its results are recorded per workflow run in the public
-repository's Actions tab. Unity and physical-board checks retain the
+fixture suites. The first two source-check runs passed; the [latest recorded run](https://github.com/Tobiansen/travelagent-crumbguard/actions/runs/43681174396)
+is public. Further results are recorded per workflow run in the repository's
+Actions tab. Unity and physical-board checks retain the
 build-specific scope in [TESTING.md](TESTING.md).
 
 For subsequent updates, check the actual CAD inventory, team/title credit and

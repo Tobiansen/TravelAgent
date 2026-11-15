@@ -18,6 +18,7 @@ The Finnair case is a demonstration of the reporting flow. Neither the app nor E
 
 ## Run it
 
+- **Android download:** [TravelAgent demo APK](https://github.com/Tobiansen/travelagent-crumbguard/releases/download/v0.1.0-junction2026/TravelAgent-Android-demo.apk), with its checksum and license notices in the [Junction 2026 prerelease](https://github.com/Tobiansen/travelagent-crumbguard/releases/tag/v0.1.0-junction2026).
 - **Without hardware:** open `app/` in **Unity 6000.6.9f1**, open `Assets/_App/Scenes/App.unity`, and press Play. Demo hardware and labelled fixture guidance work without credentials.
 - **With the real prototype:** use the Android app, the current Atech firmware and the laptop Exa gateway. Start the Windows gateway using `app/TravelAgent Demo.cmd` and wait for **Laptop connection ready**.
 - Follow [Setup](docs/SETUP.md), [Hardware](docs/HARDWARE.md) and the [two-minute demo route](docs/DEMO.md).
@@ -56,6 +57,6 @@ This is a hackathon prototype. The timeline records connected sessions only: dev
 
 ## Submission and licensing
 
-Source repository: [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard). The Unity app, gateway/launcher, current firmware source and actual STL print layouts are collected here. An APK download release is being prepared. The firmware binary remains local while upstream build/redistribution materials are reviewed; its source is included. See [Release files](docs/RELEASES.md) for hashes and availability. The demo-video link and event submission remain separate handoff items in [Submission notes](docs/SUBMISSION.md).
+Source repository: [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard). The Unity app, gateway/launcher, current firmware source and actual STL print layouts are collected here. The [APK prerelease](https://github.com/Tobiansen/travelagent-crumbguard/releases/tag/v0.1.0-junction2026) includes the Android build, checksum and license notices. The firmware binary remains local while upstream build/redistribution materials are reviewed; its source is included. See [Release files](docs/RELEASES.md) for hashes and availability. The demo-video link, Discord summary and event submission remain separate handoff items in [Submission notes](docs/SUBMISSION.md).
 
 Team-authored work is covered by [LICENSE](LICENSE). Third-party components retain their own notices in `third_party/` and within the source. Atech reference geometry must not be represented as team-authored MIT material.
