@@ -1,0 +1,17 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.travelagent.ble'
+    compileSdk getProperty('unity.compileSdkVersion') as int
+    buildToolsVersion getProperty('unity.buildToolsVersion')
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    defaultConfig {
+        minSdk getProperty('unity.minSdkVersion') as int
+        targetSdk getProperty('unity.targetSdkVersion') as int
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+    buildTypes { release { minifyEnabled false } }
+}

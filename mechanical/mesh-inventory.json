@@ -1,0 +1,116 @@
+[
+  {
+    "file": "01_case_frame_covers.stl",
+    "bytes": 298684,
+    "sha256": "c690382b9608d3cd5adb4a9efc1268ca4ec114eff4149ec1742ec4e40ce97494",
+    "triangles": 5972,
+    "coordinate_bounds": [
+      [
+        17.0,
+        23.0,
+        0.0
+      ],
+      [
+        233.0,
+        227.0,
+        16.0
+      ]
+    ],
+    "coordinate_extents": [
+      216.0,
+      204.0,
+      16.0
+    ],
+    "watertight": true,
+    "disconnected_mesh_bodies": 4,
+    "body_triangles": [
+      2160,
+      1004,
+      1404,
+      1404
+    ],
+    "body_extents": [
+      [
+        106.0,
+        136.0,
+        14.0
+      ],
+      [
+        100.0,
+        128.0,
+        8.699999809265137
+      ],
+      [
+        24.79693603515625,
+        54.0,
+        16.0
+      ],
+      [
+        24.79693603515625,
+        54.0,
+        16.0
+      ]
+    ],
+    "format_units": "STL does not encode units; interpret consistently with original mm design and verify in slicer"
+  },
+  {
+    "file": "02_dispenser_12mm_outlets.stl",
+    "bytes": 647784,
+    "sha256": "d16248a0776134ecab221817df21a8197cab13d7b678c7ec020d67a2c8623de0",
+    "triangles": 12954,
+    "coordinate_bounds": [
+      [
+        42.5,
+        61.5,
+        0.0
+      ],
+      [
+        207.5,
+        188.5,
+        63.0
+      ]
+    ],
+    "coordinate_extents": [
+      165.0,
+      127.0,
+      63.0
+    ],
+    "watertight": true,
+    "disconnected_mesh_bodies": 5,
+    "body_triangles": [
+      1020,
+      968,
+      528,
+      6488,
+      3950
+    ],
+    "body_extents": [
+      [
+        114.0,
+        70.0,
+        63.0
+      ],
+      [
+        35.0,
+        60.0,
+        8.0
+      ],
+      [
+        39.0,
+        15.0,
+        18.200000762939453
+      ],
+      [
+        45.0,
+        45.0,
+        45.0
+      ],
+      [
+        45.0,
+        44.99357604980469,
+        8.0
+      ]
+    ],
+    "format_units": "STL does not encode units; interpret consistently with original mm design and verify in slicer"
+  }
+]

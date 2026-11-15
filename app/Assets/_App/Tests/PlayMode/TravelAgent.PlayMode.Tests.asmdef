@@ -1,0 +1,20 @@
+{
+  "name": "TravelAgent.PlayMode.Tests",
+  "rootNamespace": "TravelAgent.Tests.PlayMode",
+  "references": [
+    "TravelAgent.Runtime",
+    "TravelAgent.Core",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

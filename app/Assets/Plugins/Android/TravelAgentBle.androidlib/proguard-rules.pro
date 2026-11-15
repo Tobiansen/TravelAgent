@@ -1,0 +1,14 @@
+-keep class com.travelagent.ble.BleBridge { public *; }
+-keep class com.travelagent.ble.BagBleService { *; }
+-keep class com.travelagent.ble.PhotoPickerBridge { public *; }
+-keep class com.travelagent.ble.PhotoPickerActivity { *; }
+-keep class com.travelagent.ble.ReportSharingBridge { public *; }
+-keep class com.travelagent.ble.ReportShareActivity { *; }
+-keep class com.travelagent.ble.ReportShareProvider { *; }
+-keep class com.travelagent.ble.CameraCaptureBridge { public *; }
+-keep class com.travelagent.ble.CameraCaptureActivity { *; }
+-keep class com.travelagent.ble.CameraCaptureProvider { *; }
+-keep class com.travelagent.ble.PhotoPreviewBridge { public *; }
+-keep class com.travelagent.ble.IncomingShareBridge { public *; }
+-keep class com.travelagent.ble.IncomingShareActivity { *; }
+-keep class com.travelagent.ble.GatewaySettingsBridge { public *; }

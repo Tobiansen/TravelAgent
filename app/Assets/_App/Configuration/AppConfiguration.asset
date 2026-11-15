@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936430699c5062b4f9db1ceb6fe952f5, type: 3}
+  m_Name: AppConfiguration
+  m_EditorClassIdentifier: TravelAgent.Runtime::TravelAgent.AppConfiguration
+  editorSimulatedHardware: 1
+  fixtureGuidance: 1
+  backendBaseUrl: http://127.0.0.1:8787
+  freshDemoSessionOnLaunch: 1
+  startupScreen: 0
+  bagName: My suitcase
+  showDemoControls: 1
+  beforeSample: {fileID: 5289474038645830247, guid: b517a9572dfd31c46be529f0d9316813, type: 3}
+  afterSample: {fileID: 4074822579100810997, guid: a71f2fc248e814e43896acc65bf31011, type: 3}

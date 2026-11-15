@@ -1,0 +1,114 @@
+{
+  "capturedAtUtc": "2026-11-14T17:59:36Z",
+  "purpose": "Actual Exa descriptive kind values rejected despite valid text-field grounding; no credentials or personal traveler data.",
+  "search": {
+    "results": [
+      {
+        "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+        "title": "Lost, delayed or damaged baggage | Finnair Denmark"
+      },
+      {
+        "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+        "title": "Lost, delayed or damaged baggage | Finnair"
+      }
+    ],
+    "output": {
+      "content": {
+        "reportingUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+        "missingContext": [
+          "Date of the flight from Helsinki to Copenhagen.",
+          "Specific operating carrier if different from Finnair."
+        ],
+        "items": [
+          {
+            "sourceUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+            "text": "You can create a damaged baggage report online at finnair.com/bag.",
+            "kind": "Report damaged baggage online at finnair.com/bag."
+          },
+          {
+            "sourceUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+            "kind": "Report damaged baggage at the airport Arrival Service desk.",
+            "text": "You can also visit the Arrival Service desk at the airport to verify the damage and create a report."
+          },
+          {
+            "sourceUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+            "kind": "Required information for the report.",
+            "text": "To finalise the report, you need your name, contact details, flight information, baggage receipt number, description of the bag (brand, size, color), description of the damage, and pictures of the damaged baggage."
+          },
+          {
+            "text": "Yes, pictures of the damaged baggage are a required piece of information to finalise the report.",
+            "sourceUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage",
+            "kind": "Damaged baggage photographs required."
+          },
+          {
+            "kind": "Limitation: Report deadline.",
+            "text": "Finnair cannot process damage reports made more than 7 days after your flight. Further instructions for repair or replacement are provided after the report is created. Compensation requests, insurance inquiries, or using specific repair providers like Bag Support or Dolfi1920 follow the initial damage report.",
+            "sourceUrl": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+          }
+        ]
+      },
+      "grounding": [
+        {
+          "field": "items[0].text",
+          "confidence": "high",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            },
+            {
+              "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            }
+          ]
+        },
+        {
+          "field": "items[1].text",
+          "confidence": "high",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            },
+            {
+              "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            }
+          ]
+        },
+        {
+          "field": "items[2].text",
+          "confidence": "high",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            },
+            {
+              "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            }
+          ]
+        },
+        {
+          "field": "items[3].text",
+          "confidence": "high",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            },
+            {
+              "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            }
+          ]
+        },
+        {
+          "field": "items[4].text",
+          "confidence": "high",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/dk-en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            },
+            {
+              "url": "https://www.finnair.com/en/baggage-on-finnair-flights/lost--delayed-or-damaged-baggage"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "capturedAtUtc": "2026-11-14T19:43:49Z",
+  "purpose": "Actual split primary-source field grounding: airline-owned identity/site plus exact IATA member entry for the code. No private ticket content or credentials.",
+  "search": {
+    "results": [
+      {
+        "url": "https://www.iata.org/en/about/members/airline-list/finnair/86/",
+        "title": "IATA - Finnair"
+      },
+      {
+        "url": "https://www.finnair.com/",
+        "title": "Flight bookings | select country and language | Finnair"
+      },
+      {
+        "url": "https://company.finnair.com/en/about",
+        "title": "About | Finnair"
+      }
+    ],
+    "output": {
+      "content": {
+        "airline": "Finnair",
+        "iataCode": "AY",
+        "officialSite": "https://www.finnair.com/"
+      },
+      "grounding": [
+        {
+          "field": "airline",
+          "citations": [
+            {
+              "url": "https://www.iata.org/en/about/members/airline-list/finnair/86/",
+              "title": "IATA - Finnair"
+            },
+            {
+              "url": "https://company.finnair.com/en/about",
+              "title": "About | Finnair"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "iataCode",
+          "citations": [
+            {
+              "url": "https://www.iata.org/en/about/members/airline-list/finnair/86/",
+              "title": "IATA - Finnair"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "officialSite",
+          "citations": [
+            {
+              "url": "https://www.finnair.com/",
+              "title": "Flight bookings | select country and language | Finnair"
+            }
+          ],
+          "confidence": "high"
+        }
+      ]
+    }
+  }
+}

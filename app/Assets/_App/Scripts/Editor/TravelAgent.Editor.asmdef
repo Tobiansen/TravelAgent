@@ -1,0 +1,6 @@
+{
+  "name": "TravelAgent.Editor",
+  "rootNamespace": "TravelAgent.Editor",
+  "references": ["TravelAgent.Runtime", "TravelAgent.Core", "UnityEngine.UI", "Unity.TextMeshPro", "Unity.InputSystem", "UnityEditor.TestRunner", "UnityEngine.TestRunner"],
+  "includePlatforms": ["Editor"]
+}

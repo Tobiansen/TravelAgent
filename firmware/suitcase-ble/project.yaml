@@ -1,0 +1,37 @@
+name: suitcase-ble
+board: 14port
+modules_path: ../suitcase-full/modules
+libraries:
+  - h2zero/NimBLE-Arduino@2.5.2
+  - bblanchon/ArduinoJson@7.4.2
+modules:
+  - {id: dc_motor, instance: wheelMotor, port: 11}
+  - {id: button, instance: buttonA, port: 1}
+  - {id: button, instance: buttonB, port: 9}
+  - {id: neopixel, instance: lightLeft, port: 2}
+  - {id: neopixel, instance: lightRight, port: 5}
+  - {id: icm40608, instance: imu, port: 7}
+  - {id: speaker, instance: siren, ports: [3, 4]}
+feedback: false
+code:
+  globals: |
+    #include "../../ble_app.h"
+    crumbguard::FullApp app;
+    travelble::App wireless;
+  setup: |
+    wheelMotor.stop();
+    lightLeft.setBrightness(30); lightRight.setBrightness(30);
+    lightLeft.clear(); lightLeft.show(); lightRight.clear(); lightRight.show();
+    siren.setVolume(0.20f); siren.stop();
+    wireless.begin(app);
+  loop: |
+    wireless.tick(app, buttonA, buttonB);
+    app.tick(imu, lightLeft, lightRight, buttonA, buttonB, siren, wheelMotor);
+    wireless.afterTick(app);
+    if (atech_action == "alarm_status") { app.report(imu, wheelMotor); atechDone(); }
+    if (atech_action == "ble_status") { wireless.report(); atechDone(); }
+    if (atech_action == "dispenser_disable") { app.disable(wheelMotor); atechDone(); }
+    if (atech_action == "dispenser_enable") {
+      if (!app.enableIfDisarmed(wheelMotor)) _atech_error="disarm first; PWM must be ready";
+      atechDone();
+    }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <!-- Private laptop-backed demo only. Use HTTPS and remove this override before distribution. -->
+    <application android:usesCleartextTraffic="true">
+        <activity android:name="com.travelagent.ble.IncomingShareActivity"
+                  android:label="TravelAgent" android:exported="true"
+                  android:excludeFromRecents="true" android:noHistory="true"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/html" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <provider android:name="com.travelagent.ble.CameraCaptureProvider"
+                  android:authorities="${applicationId}.camera"
+                  android:exported="false" android:grantUriPermissions="true">
+            <grant-uri-permission android:pathPrefix="/capture/" />
+        </provider>
+        <activity android:name="com.travelagent.ble.CameraCaptureActivity"
+                  android:exported="false" android:excludeFromRecents="true"
+                  android:configChanges="orientation|screenSize"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <provider android:name="com.travelagent.ble.ReportShareProvider"
+                  android:authorities="${applicationId}.reports"
+                  android:exported="false" android:grantUriPermissions="true">
+            <grant-uri-permission android:pathPrefix="/reports/" />
+        </provider>
+        <activity android:name="com.travelagent.ble.ReportShareActivity"
+                  android:exported="false" android:excludeFromRecents="true"
+                  android:configChanges="orientation|screenSize"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.travelagent.ble.PhotoPickerActivity"
+                  android:exported="false" android:excludeFromRecents="true"
+                  android:configChanges="orientation|screenSize"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <service android:name="com.travelagent.ble.BagBleService"
+                 android:exported="false" android:stopWithTask="false"
+                 android:foregroundServiceType="connectedDevice" />
+    </application>
+</manifest>
