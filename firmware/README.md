@@ -74,9 +74,8 @@ these are not reported as runtime passes. Source for the harnesses is in
 Physical checks established authenticated phone streaming, movement markers,
 reconnection gaps and quiet Arm/Armed/Disarm operation for this firmware. Earlier
 assembled empty-drum checks demonstrated lights, siren, rotation and stopping on
-Disarm. Loaded crumb dispensing and the extended cutoff repeat were skipped;
-their performance is not established. See [HARDWARE.md](../docs/HARDWARE.md) for
-the feature boundaries and operating controls.
+Disarm. See [HARDWARE.md](../docs/HARDWARE.md) for operating controls and
+[Testing](../docs/TESTING.md) for the recorded checks.
 
 The local driver READMEs retain their Atech-derived provenance. Dependencies and
 reference geometry keep their respective upstream licenses; they are not made
@@ -85,9 +84,4 @@ first-party code by this submission.
 Exact license/NOTICE files available from the demonstrated dependency caches are
 preserved in [`third_party/firmware/`](../third_party/firmware/README.md), with
 tested versions and upstream provenance. Full standard GNU LGPL-2.1/GPL-3.0
-texts are supplied separately and clearly labelled; no absent SDK/framework
-copyright notice is fabricated.
-Compiled images are local staging artifacts under ignored `dist/`. A future
-binary Release must carry the applicable complete notices and corresponding
-source/build or relinking materials required by its dependencies. The notice
-inventory does not certify licensing compliance.
+texts are supplied separately and clearly labelled.

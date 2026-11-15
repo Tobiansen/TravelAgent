@@ -22,7 +22,7 @@ The phone rejects invalid, stale, reordered and mismatched-device/boot samples. 
 
 The Unity project uses saved scenes, prefabs, TextMeshPro and normal uGUI controls. Runtime composition wires the UI to replaceable hardware, research and photo adapters; Core contains the storage and protocol models.
 
-Real and Demo use separate local stores. The phone retains at most **3,000** received motion samples, roughly ten minutes at 5 Hz, saving periodically and on pause. It does not download a flight-long device history after reconnecting.
+Real and Demo use separate local stores. The phone retains at most **3,000** received motion samples, roughly ten minutes at 5 Hz, saving periodically and on pause. History consists of samples received during an active BLE connection.
 
 The hackathon configuration enables `freshDemoSessionOnLaunch`:
 
@@ -60,7 +60,7 @@ The earlier airline-identity endpoint remains in the gateway source for compatib
 
 The Windows status window selects an active physical private-network interface, excluding virtual/VPN adapters. It starts an authenticated Python gateway or reuses a healthy existing one. It privately checks the saved bearer with an empty-context request that is rejected before any Exa research.
 
-Health monitoring and bounded recovery apply to its own Python child. It never terminates an unrelated listener or trusts an old PID as proof of ownership. The encrypted session token survives a private-IP change; the phone's service URL must still be updated manually. HTTP is a development LAN arrangement; hosted HTTPS is future work.
+Health monitoring and bounded recovery apply to its own Python child. It never terminates an unrelated listener or trusts an old PID as proof of ownership. The encrypted session token survives a private-IP change; the phone's service URL must still be updated manually. The gateway uses HTTP on the local network.
 
 ## Airline handoff
 

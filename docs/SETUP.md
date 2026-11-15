@@ -55,8 +55,8 @@ USB is not required during the wireless demo afterward.
 
 An address change preserves the desktop launcher's token, but you must update the
 phone URL using **Copy address**. A guest network that isolates devices will not
-work for direct laptop-to-phone HTTP. This is a local hackathon HTTP arrangement;
-HTTPS hosting is future work. The launcher does not alter firewall settings.
+work for direct laptop-to-phone HTTP. The gateway uses HTTP on the local network.
+The launcher does not alter firewall settings.
 
 The earlier terminal-only scripts remain in `app/tools`: `Start-Backend.ps1`
 defaults to loopback `127.0.0.1:8787`; `Start-LanDemo.ps1` is the manual foreground

@@ -1,4 +1,4 @@
-# Two-minute demonstration
+# Optional usage walkthrough
 
 The story is: **share a ticket → observe a disturbance → inspect the bag → ask Exa for reporting steps → gather evidence → continue with the airline**.
 

@@ -1,62 +1,25 @@
-# TravelAgent / CrumbGuard
+# TravelAgent
 
-A suitcase alarm, a live motion timeline, and an Exa assistant that helps a traveler take the next step after finding damaged baggage.
+TravelAgent links an Atech ESP32-S3 suitcase alarm to a Unity Android app over Bluetooth. The app controls arming and A/B button codes and shows live motion with event markers. While armed, the board responds to disturbances with lights, a siren and a motorized breadcrumb drum.
 
-Built for Junction 2026 with an Atech ESP32-S3 kit, a Unity Android app and a small laptop gateway. The traveler checks the bag and decides whether damage exists. Exa researches the airline's reporting process and required evidence; the app then opens the airline's reporting channel.
+Ticket text shared from Gmail supplies the airline. After the traveler inspects the bag and confirms damage, Exa Search and Contents retrieve official reporting steps, photo requirements and the reporting page. Evidence photos stay local; the traveler completes the airline's form.
 
-<img src="media/live-motion.png" alt="Actual connected-board acceleration trace with selectable movement markers" width="300">
+<img src="media/live-motion.png" alt="TravelAgent live motion timeline" width="280">
 
-## The demonstration
+## Run
 
-1. Share selected boarding-confirmation text from Gmail to TravelAgent. The app reads supported airline and route details locally.
-2. Move the connected, Disarmed bag. The measured trace updates and red movement markers open event details.
-3. Inspect the suitcase and contents, then explicitly record whether damage was found.
-4. Tap **Find reporting steps with Exa** to retrieve sourced airline instructions and photo requirements.
-5. Take local evidence photos and continue to the airline's reporting page. Nothing is submitted automatically.
+- **Android:** download the [APK](https://github.com/Tobiansen/TravelAgent/releases/download/v0.1.0-junction2026/TravelAgent-Android-demo.apk).
+- **Unity:** open `app/` in **Unity 6000.6.9f1**, load `Assets/_App/Scenes/App.unity` and press Play.
+- **Hardware and Exa:** follow [Setup](docs/SETUP.md) and [Hardware](docs/HARDWARE.md). The Windows gateway starts with `TravelAgent Demo.cmd` and keeps the Exa key on the laptop.
 
-The Finnair case is a demonstration of the reporting flow. Neither the app nor Exa analyses photographs or infers damage from motion.
+## Source
 
-## Run it
-
-- **Android download:** [TravelAgent demo APK](https://github.com/Tobiansen/travelagent-crumbguard/releases/download/v0.1.0-junction2026/TravelAgent-Android-demo.apk), with its checksum and license notices in the [Junction 2026 prerelease](https://github.com/Tobiansen/travelagent-crumbguard/releases/tag/v0.1.0-junction2026).
-- **Without hardware:** open `app/` in **Unity 6000.6.9f1**, open `Assets/_App/Scenes/App.unity`, and press Play. Demo hardware and labelled fixture guidance work without credentials.
-- **With the real prototype:** use the Android app, the current Atech firmware and the laptop Exa gateway. Start the Windows gateway using `app/TravelAgent Demo.cmd` and wait for **Laptop connection ready**.
-- Follow [Setup](docs/SETUP.md), [Hardware](docs/HARDWARE.md) and the [two-minute demo route](docs/DEMO.md).
-
-The saved presentation configuration starts a blank trip and timeline after a full app close/reopen. Returning from Home, Gmail or the camera retains the current run. Pairing, board codes and gateway settings stay saved.
-
-## How it fits together
-
-```mermaid
-flowchart LR
-    Bag["Atech board<br/>IMU · buttons · lights · siren · motor"] <-->|Bluetooth LE| Phone["Unity Android app<br/>timeline · inspection · local photos"]
-    Phone -->|Short airline policy context| Gateway["Laptop gateway<br/>Exa key stays here"]
-    Gateway <-->|Search and Contents APIs| Exa["Exa web research"]
-    Phone -->|Traveler opens page| Airline["Airline reporting channel"]
-```
-
-See [Architecture](docs/ARCHITECTURE.md) for data boundaries and protocol behavior.
-
-## Repository contents
-
-| Path | Contents |
+| Folder | Contents |
 | --- | --- |
-| `app/` | Editable Unity project, Android Java plugin, Python Exa gateway, Windows launcher and software tests |
-| `firmware/` | Current board source, required custom modules and build instructions |
-| `hardware-tools/` | Host-side firmware harness source and stubs |
-| `mechanical/` | Actual case/dispenser STL print layouts, mesh inventory and preview; editable Fusion source can be added later |
-| `docs/` | Setup, architecture, demo, validation and submission notes |
-| `media/` | Selected screenshots suitable for public documentation |
-| `dist/` | Local binary staging only; excluded from Git and intended for release downloads |
+| `app/` | Unity app, Android Bluetooth plugin, Python Exa gateway and Windows launcher |
+| `firmware/` | ESP32-S3 firmware and custom motor/IMU modules |
+| `mechanical/` | Case and dispenser STL print layouts |
+| `hardware-tools/` | Firmware test harnesses |
+| `docs/` | Setup, architecture, hardware and testing |
 
-## What is verified—and what remains
-
-The real board has streamed motion into the phone, produced selectable movement markers while Disarmed, and completed a quiet Arm/Armed/Disarm check. The latest app build passes **213 EditMode and 49 PlayMode tests** and its fresh-launch behavior was checked on an Android phone. [Testing](docs/TESTING.md) separates each build's source and physical acceptance.
-
-This is a hackathon prototype. The timeline records connected sessions only: device-side offline storage/backfill, variable resolution and quiet transit recording are future work. Loaded breadcrumb dispensing and prolonged alarm cutoff were not validated in the assembled demonstration. The app does not determine damage, liability, compensation or reporting deadlines.
-
-## Submission and licensing
-
-Source repository: [Tobiansen/travelagent-crumbguard](https://github.com/Tobiansen/travelagent-crumbguard). The Unity app, gateway/launcher, current firmware source and actual STL print layouts are collected here. The [APK prerelease](https://github.com/Tobiansen/travelagent-crumbguard/releases/tag/v0.1.0-junction2026) includes the Android build, checksum and license notices. The firmware binary remains local while upstream build/redistribution materials are reviewed; its source is included. See [Release files](docs/RELEASES.md) for hashes and availability. The demo-video link, Discord summary and event submission remain separate handoff items in [Submission notes](docs/SUBMISSION.md).
-
-Team-authored work is covered by [LICENSE](LICENSE). Third-party components retain their own notices in `third_party/` and within the source. Atech reference geometry must not be represented as team-authored MIT material.
+See [Architecture](docs/ARCHITECTURE.md) for the Bluetooth protocol and Exa integration.

@@ -43,11 +43,6 @@ platform and NeoPixel versions as well. Upstream source can be obtained from the
 versioned package releases and repositories above rather than from this notice
 directory.
 
-Compiled binaries are staged locally in the ignored `dist/` area, separately from
-the source tree intended for Git. A future binary Release needs the applicable
-complete license and attribution texts, plus corresponding source and build or
-relinking materials required by its dependencies, including the LGPL components.
-Preserve the first-party source, local driver modifications and exact dependency
-versions with that release. Obtain any missing upstream license texts and review
-the complete linked dependency set when preparing it; this cache-derived notice
-inventory is not a certification of licensing compliance.
+Compiled firmware redistribution must retain the applicable licenses and notices,
+with corresponding source and build or relinking materials as required by each
+dependency, including the LGPL components.

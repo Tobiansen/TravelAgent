@@ -21,9 +21,8 @@ gateway has no role in guard control.
 
 Change module connections with power removed. Keep the motor supported by its
 mount rather than its electrical connector. The printed drum rotates about a
-horizontal axis in the intended mounted orientation. Mechanical print files
-must correspond to the actual drum design; the older vertical-axis wheel
-prototype is not its replacement.
+horizontal axis in the intended mounted orientation. The [mechanical directory](../mechanical/README.md)
+contains the case and dispenser print layouts.
 
 ## Guard and local controls
 
@@ -60,10 +59,9 @@ bounded active-session history of up to 3,000 samples. The presentation build
 starts a fresh trip/history after a full app close/reopen, while preserving
 ownership and connection settings.
 
-There is **no device-side offline flight journal, disconnected backfill,
-adaptive resolution, quiet transit mode or image damage inference** in this
-prototype. Firmware capabilities cover snapshot/ownership/authentication,
-button sequence changes, guard control, live motion and live movement records.
+Firmware capabilities cover snapshot/ownership/authentication, button sequence
+changes, guard control, live motion and live movement records. Measurements are
+transmitted during an authenticated BLE connection.
 
 ## Reproduce and interpret the evidence
 
@@ -78,11 +76,7 @@ gaps and quiet Arm/Armed/Disarm checks. Its build included **62 compile-time
 assertions**. The **22 latest full application/protocol host scenarios compiled
 only**; the Windows host runner was blocked, not passed.
 
-Earlier assembled-hardware testing established empty-drum rotation, alarm
-outputs, app/physical disarm, changed physical codes and operation without an
-active phone connection. Those tests retain their earlier firmware scope; the
-latest motion increment did not repeat the deliberate siren/motor alarm cycle.
-Loaded dispensing, crumb quantity/flow, jam resistance, active-pulse stopping
-latency and the extended cutoff repeat are not claimed as verified. The team
-demonstrated the mechanism as a hackathon prototype, not as a completed flight
-recorder or production security device.
+Earlier assembled-hardware testing covered empty-drum rotation, alarm outputs,
+app/physical disarm, changed physical codes and operation without an active phone
+connection. Those physical checks retain their earlier firmware scope; the
+streaming and quiet guard checks above apply to the live-motion firmware.

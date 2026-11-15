@@ -20,9 +20,7 @@ Atech's official hardware-reference STL/GLB meshes are **CC BY-NC 4.0**, not MIT
 They are deliberately not bundled here. Obtain them from
 [Atech simulations](https://atech.dev/simulations) and preserve the
 [upstream model license](https://github.com/atechdotdev/atech-atelier/blob/main/models/LICENSE.md)
-if redistributing them. Imported Atech reference components inside any later
-CAD archive retain those terms; attribute and identify them separately from
-team-created printable geometry.
+if redistributing them.
 
 Finnair, Exa, Atech, Android and Unity names describe integrations and references;
 their trademarks remain with their respective owners. Airline web pages are
